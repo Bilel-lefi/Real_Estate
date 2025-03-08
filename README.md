@@ -48,11 +48,8 @@ git clone https://github.com/Bilel-lefi/Real_Estate.git
 cd Real_Estate
 ```
 
-ّ```bash
+```bash
 npm install
 
 npm run dev
-
-```
-
 ```
