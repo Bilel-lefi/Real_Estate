@@ -1,27 +1,22 @@
-import About from "./component/About"
-import Connect from "./component/Connect"
-import Hero from "./component/Hero"
-import Light from "./component/light"
-import Navbar from "./component/Navbar"
-import Project from "./component/Project"
-import Skills from "./component/Skills"
-
+import React from "react";
+import Header from "./components/Header";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Testimonials from "./components/Testimonails";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
-
   return (
-    <main className="screen-max-width w-[100vw] overflow-x-hidden relative " >
-      {/* <Light /> */}
-      <Navbar />
-      <Hero />
+    <div className="w-full overflow-hidden">
+      <Header />
       <About />
-      <Skills />
-      <Project />
-      <Connect />
-
-
-    </main>
-  )
+      <Projects />
+      <Testimonials/>
+      <Contact/>
+      <Footer/>
+    </div>
+  );
 }
 
-export default App
+export default App;
