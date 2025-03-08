@@ -43,11 +43,16 @@ To run this project locally, follow these steps:
 
 ### 1. Clone the repository:
 
+```bash
+git clone https://github.com/Bilel-lefi/Real_Estate.git
+cd Real_Estate
+```
+
+ّ```bash
 npm install
 
 npm run dev
 
-```bash
-git clone https://github.com/Bilel-lefi/Real_Estate.git
-cd Real_Estate
+```
+
 ```
