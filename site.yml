@@ -1,14 +1,23 @@
----
-- name: Déployer un serveur Apache
-  hosts: webservers
+- hosts: webservers
   become: yes
-  tasks:
-    - name: Installer Apache
-      apt:
-        name: apache2
-        state: present
 
-    - name: Démarrer Apache
+  tasks:
+    - name: Installer Apache et Git
+      apt:
+        name:
+          - apache2
+          - git
+        state: present
+        update_cache: yes
+
+    - name: Cloner le dépôt Git du projet
+      git:
+        repo: 'https://github.com/Bilel-lefi/Real_Estate.git'
+        dest: /var/www/html/monprojet
+        version: main  # ou master ou la branche que tu veux
+        force: yes
+
+    - name: S'assurer que le service Apache est démarré et activé
       service:
         name: apache2
         state: started
